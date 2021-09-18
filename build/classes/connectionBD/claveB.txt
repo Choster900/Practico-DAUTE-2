@@ -1,0 +1,29 @@
+CREATE DATABASE claveB;
+
+USE claveB;
+
+CREATE TABLE proyecto (
+	codigoProyecto INT PRIMARY KEY NOT NULL,
+	nombre VARCHAR (50) NOT NULL,
+	ubicacion INT NOT NULL
+);
+
+CREATE TABLE coordinador (
+	codigoCoordinador INT PRIMARY KEY NOT NULL,
+	nombre VARCHAR (50) NOT NULL,
+	edad INT NOT NULL,
+	sueldoBase DOUBLE NOT NULL,
+	codigoProyecto INT NOT NULL,
+	FOREIGN KEY (codigoProyecto) REFERENCES proyecto (codigoProyecto)
+);
+
+
+INSERT INTO PROYECTO value (0618,'Coordinacion del 15 de Septiembre',1);
+INSERT INTO PROYECTO value (0619,'Almuerzo de convivencia',2);
+INSERT INTO PROYECTO value (0620,'reuniones de alumnos',3);
+INSERT INTO PROYECTO value (0621,'Examenes Diferidos',4);
+INSERT INTO PROYECTO value (0622,'Limpieza de Aulas',5);
+INSERT INTO PROYECTO value (0623,'Curso basico para python',6);
+INSERT INTO PROYECTO value (0624,'Guardar los Documentos sobrados',7);
+INSERT INTO PROYECTO value (0625,'Clase de Redes a SIS11A',8);
+
