@@ -34,7 +34,7 @@ public class FormCoordinador extends javax.swing.JInternalFrame {
 
     //METODOS INICIALES--------------------------------------------------------
     public void llenarComboBoxProyectos() {
-        ArrayList<ClsProyecto> listaProyectos = daoProyecto.mostrarProyectos();
+        ArrayList<ClsProyecto> listaProyectos = daoProyecto.readProyectos();
         DefaultComboBoxModel<ClsComboBoxModel> mld = new DefaultComboBoxModel<>();
         for (ClsProyecto items : listaProyectos) {
             mld.addElement(new ClsComboBoxModel(items.getCodigo(), items.getNombre()));

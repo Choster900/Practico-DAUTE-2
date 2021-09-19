@@ -18,7 +18,7 @@ import model.ClsProyecto;
  */
 public class ClsProyectoDAO extends ClsConection {
 
-    public ArrayList<ClsProyecto> mostrarProyectos() {
+    public ArrayList<ClsProyecto> readProyectos() {
         ArrayList<ClsProyecto> listaProyectos = new ArrayList<>();
         try {
             this.conectar();
